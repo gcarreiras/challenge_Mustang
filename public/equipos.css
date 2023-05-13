@@ -1,0 +1,81 @@
+h1 {
+  font-size: 0.9em; /* ajusta el tamaño del texto */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+  color: rgb(27, 26, 26); /* ajusta el color del texto */
+  background-color: rgb(255, 255, 255); 
+  padding: 10px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 10px 0;
+  color: #333;
+  background-color: #f7f7f7;
+  padding: 20px;
+  text-align: justify;
+  justify-content: center;
+}
+
+.tabla-equipos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  
+  border-bottom: 2px solid black;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+tr:first-child td {
+  border-top: 1px solid black;
+}
+.table-class{
+  border: 3px solid rgb(255, 255, 255);
+  border-color: black;
+}
+.first {
+  background-color: green;
+}
+
+.last {
+  background-color: red;
+}
+
+.tr-class{
+  align-items: flex-start;
+}
+
+@media (max-width: 480px) {
+  table th:nth-child(4),
+  table td:nth-child(4),
+  table th:nth-child(5),
+  table td:nth-child(5),
+  table th:nth-child(6),
+  table td:nth-child(6),
+  table th:nth-child(8),
+  table td:nth-child(8) {
+    display: none;
+  }
+  h1{
+    flex-wrap: wrap;
+  }
+  p {
+    font-size: 14px;
+    line-height: 1.3;
+    margin: 8px 0;
+  }
+}

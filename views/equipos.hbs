@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabla de equipos</title>
+  <link rel="stylesheet" type="text/css" href="./equipos.css">
+
+
+</head>
+
+<h1 class="h1">TABLA DE POSICIONES DE LA LIGA PROFESIONAL DE FÚTBOL ARGENTINO</h1>
+
+<div class="tabla-equipos">
+
+<table class="table-class">
+  <thead>
+    <tr class="tr-class">
+      <th>Pos</th>
+      <th></th>
+      <th>Equipo</th>
+      <th>PJ</th>
+      <th>G</th>
+      <th>E</th>
+      <th>P</th>
+      <th>GF</th>
+      <th>GC</th>
+      <th>DG</th>
+      <th>Pts</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    {{#each equipos}}
+      <tr {{#if first}}class="first"{{/if}}{{#if last}}class="last"{{/if}}>
+        <td >{{pos}}</td>
+        <td><img src="{{img}}" alt="sin foto"></td>
+        <td>{{nombre}}</td>
+        <td>{{partidosJ}}</td>
+        <td>{{ganados}}</td>
+        <td>{{empatados}}</td>
+        <td>{{perdidos}}</td>
+        <td>{{golesF}}</td>
+        <td>{{golesC}}</td>
+        <td>{{diferenciaG}}</td>
+        <td>{{puntos}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+</div>
+<p>
+  En nuesta web encontraras la tabla de posiciones de la liga profesional de futbol argentino, actualizada y sin publicidad. Encuentra tambien los equipos punteros
+  del campeonato, como asi tambien los equipos proximos al  descenso 
+</p>
+
+</html>
+
