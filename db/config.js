@@ -8,7 +8,7 @@ if(process.env.NODE_ENV !== "production"){
 const dbConnection = async()=> {
 
     try {
-       await mongoose.connect(MONGODB_URI) // me estaria dando problemas en el deplpo
+       await mongoose.connect(process.env.Mongo_DB_URL) // me estaria dando problemas en el deplpo
        console.log("conectado");
     } catch (error) {
         console.log(error)
