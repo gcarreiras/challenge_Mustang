@@ -18,6 +18,7 @@ app
 
 
 async function obtenerInfoTabla(){
+  await vaciarBaseDeDatos()
   try {
     
     const response = await axios.get(URL)
@@ -92,7 +93,6 @@ setInterval(async () => {
   console.log('Estoy en el interval - SE ACTUALIZÓ LA BASE DE DATOS');
   try {
     const datos = await obtenerInfoTabla();
-    await vaciarBaseDeDatos()
     await guardarEquipos();
     console.log('La base de datos ha sido actualizada exitosamente');
   } catch (error) {

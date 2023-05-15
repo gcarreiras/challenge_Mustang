@@ -3,6 +3,8 @@ const hbs = require('hbs');
 const cors = require("cors")
 const Equipo = require('./model.js');
 const { dbConnection } = require('./db/config.js');
+const fs = require('fs');// probando
+
 const app = express();
 let interval = 5; // expresar en minutos
 const obtenerInfoTabla = require('./index.js')
@@ -19,10 +21,18 @@ app.use(express.static(__dirname + '/public/css', {
 }));
 
 
-app.get('/', function(req, res) {
-  res.sendFile(__dirname + '/public/equipo.hbs');
-});
+// app.get('/', function(req, res) {
+//   res.sendFile(__dirname + '/public/equipo.hbs');
+// });
 
+app.get('/', function(req, res) {
+  // Lee el archivo HTML
+  const contenidoHtml = fs.readFileSync('public/index.html', 'utf8');
+  
+  // Envía el contenido HTML como respuesta
+  res.setHeader('Content-Type', 'text/html');
+  res.send(contenidoHtml);
+});
 
 // Iniciar el servidor
 app.listen(3001, async() => {
